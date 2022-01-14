@@ -1,13 +1,139 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
+:root {
+  --acbutton: #d81e5b;
+  --purple: hsl(265, 100%, 61%);
+  --dark: #9b59b6;
+  --light: #eee;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+  font-family: "digital-7";
+  src: url("./digital-7.ttf");
 }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "digital-7";
+}
+
+body {
+  background-color: var(--light);
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.calculator {
+  width: 100%;
+  max-width: 250px;
+  max-height: 300px;
+  background-color: #FFF;
+  overflow: hidden;
+  box-shadow: 0px 2px 64px rgba(0,0,0,0.2);
+  border-radius: 16px;
+  border: 0.1px solid white
+}
+
+.display {
+  padding: 16px;
+  text-align: right;
+  background-color: var(--dark);
+  color: var(--light);
+  font-size: 24px;
+  font-weight: 700;
+  font-family: "digital-7",sans-serif;
+}
+
+.display span {
+  font-size: 14px;
+  color: #a4b0be;
+  font-family: "digital-7",sans-serif;
+}
+
+button {
+  appearance: none;
+  border: none;
+  outline: none;
+  color: #FFF;
+  font-size: 15px;
+  padding: 16px;
+  cursor: pointer;
+  transition: 0.4s;
+  border: 0.1px solid white
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+.operators {
+  display: flex;
+}
+
+.operators button {
+  flex: 1 1 0%;
+  background-color: var(--acbutton);
+  color: var(--light);
+}
+
+.digits {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.digits button {
+  flex: 1 1 33.333%;
+  max-width: 33.333%;
+  background-color: var(--dark);
+}
+
+.digits .equal {
+  background-color: #2ecc71;
+}
+
+.operators .ops {
+  background-color: #FFC107;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
